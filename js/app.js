@@ -27,7 +27,7 @@ Enemy.prototype.render = function() {
 
 class Hero {
     constructor() {
-
+        this.sprite = 'images/char-horn-girl.png';
     }
 
     update() {
@@ -39,7 +39,7 @@ class Hero {
     }
 
     handleInput() {
-      
+
     }
 }
 
