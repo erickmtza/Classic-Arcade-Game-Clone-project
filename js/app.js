@@ -27,6 +27,18 @@ Enemy.prototype.render = function() {
 
 class Hero {
     constructor() {
+
+    }
+
+    update() {
+
+    }
+
+    render() {
+
+    }
+
+    handleInput() {
       
     }
 }
