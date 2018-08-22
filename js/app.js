@@ -47,7 +47,7 @@ class Hero {
 // Place all enemy objects in an array called allEnemies
 const allEnemies = [];
 // Place the player object in a variable called player
-
+const player = new Hero();
 
 
 // This listens for key presses and sends the keys to your
