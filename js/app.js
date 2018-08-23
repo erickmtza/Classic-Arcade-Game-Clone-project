@@ -28,6 +28,8 @@ Enemy.prototype.render = function() {
 class Hero {
     constructor() {
         this.sprite = 'images/char-horn-girl.png';
+        this.x = 203;
+        this.y = 399;
     }
 
     update() {
