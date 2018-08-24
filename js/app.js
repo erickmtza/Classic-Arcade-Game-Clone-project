@@ -43,16 +43,16 @@ class Hero {
     handleInput(key) {
         switch(key) {
             case 'left':
-              this.x -= 1;
+              this.x = this.x > 0 ? this.x - 1 : this.x;
               break;
             case 'up':
-              this.y -= 1;
+              this.y = this.y > 0 ? this.y - 1 : this.y;
               break;
             case 'down':
-              this.y += 1;
+              this.y = this.y < 5 ? this.y + 1 : this.y;
               break;
             case 'right':
-              this.x += 1;
+              this.x = this.x < 4 ? this.x + 1 : this.x;
         }
     }
 }
