@@ -37,7 +37,7 @@ class Hero {
     }
 
     render() {
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+        ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
     }
 
     handleInput() {
