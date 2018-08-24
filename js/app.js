@@ -40,8 +40,20 @@ class Hero {
         ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
     }
 
-    handleInput() {
-
+    handleInput(key) {
+        switch(key) {
+            case 'left':
+              this.x -= 1;
+              break;
+            case 'up':
+              this.y -= 1;
+              break;
+            case 'down':
+              this.y += 1;
+              break;
+            case 'right':
+              this.x += 1;
+        }
     }
 }
 
