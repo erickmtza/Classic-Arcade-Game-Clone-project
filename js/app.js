@@ -60,6 +60,9 @@ class Hero {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const allEnemies = [];
+
+const enemy = new Enemy();
+
 // Place the player object in a variable called player
 const player = new Hero();
 
