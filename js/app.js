@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function(x, y) {
+var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -8,6 +8,7 @@ var Enemy = function(x, y) {
     this.sprite = 'images/enemy-bug.png';
     this.x = x;
     this.y = y;
+    this.speed = speed;
 };
 
 // Update the enemy's position, required method for game
@@ -19,7 +20,7 @@ Enemy.prototype.update = function(dt) {
     if(this.x > 5) {
         this.x = -1;
     } else {
-      this.x += dt;
+      this.x += this.speed * dt;
     }
 };
 
@@ -68,7 +69,7 @@ class Hero {
 // Place all enemy objects in an array called allEnemies
 const allEnemies = [];
 
-const enemy = new Enemy(-1, 0);
+const enemy = new Enemy(-1, 0, 3);
 allEnemies.push(enemy);
 
 // Place the player object in a variable called player
