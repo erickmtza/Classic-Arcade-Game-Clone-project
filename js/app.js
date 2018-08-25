@@ -70,7 +70,9 @@ class Hero {
 const allEnemies = [];
 
 const enemy = new Enemy(-1, 0, 3);
-allEnemies.push(enemy);
+const enemy2 = new Enemy(-1, 1, .5);
+const enemy3 = new Enemy(-1, 2, 1);
+allEnemies.push(enemy, enemy2, enemy3);
 
 // Place the player object in a variable called player
 const player = new Hero();
