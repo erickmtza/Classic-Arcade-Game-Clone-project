@@ -51,7 +51,11 @@ class Hero {
             }
         }
         if(this.y === 0 && !this.win) {
-              setTimeout(function(){ alert("Win"); }, 50);
+              setTimeout(function() {
+                  if(confirm('You Won!')) {
+                      document.location.reload(false);
+                  }
+              }, 50);
               this.win = true;
         }
     }
