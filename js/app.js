@@ -38,6 +38,7 @@ class Hero {
         this.sprite = 'images/char-horn-girl.png';
         this.x = 2;
         this.y = 4;
+        this.win = false;
     }
 
     update() {
@@ -48,6 +49,10 @@ class Hero {
                     this.y = 4;
                 }
             }
+        }
+        if(this.y === 0 && !this.win) {
+              setTimeout(function(){ alert("Win"); }, 50);
+              this.win = true;
         }
     }
 
