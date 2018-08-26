@@ -41,7 +41,14 @@ class Hero {
     }
 
     update() {
-
+        for(let enemy of allEnemies) {
+            if(this.y === enemy.y) {
+                if(this.x >= enemy.x - 0.5 && this.x <= enemy.x + .7) {
+                    this.x = 2;
+                    this.y = 4;
+                }
+            }
+        }
     }
 
     render() {
