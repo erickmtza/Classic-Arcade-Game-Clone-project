@@ -1,4 +1,11 @@
 // Enemies our player must avoid
+/**
+* @description For new enemy objects with assigned default characteristics
+* @constructor
+* @param {string} x - Initial position of enemy on x axis
+* @param {string} y - Initial position of enemy on y axis
+* @param {string} speed - The set speed for enemy object
+*/
 var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
@@ -11,12 +18,18 @@ var Enemy = function(x, y, speed) {
     this.speed = speed;
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+/**
+* @description Update the enemy's position
+* @param {number} dt - a time delta between ticks
+*/
 Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    /**
+    * @description Essentially creating a loop where if the enemy reaches the
+    end of the canvas, it will start off at opposite end.
+    */
     if(this.x > 5) {
         this.x = -1;
     } else {
@@ -33,6 +46,10 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+/**
+* @description For new player objects and assigning default characteristics
+* @constructor
+*/
 class Hero {
     constructor() {
         this.sprite = 'images/char-horn-girl.png';
@@ -41,7 +58,17 @@ class Hero {
         this.win = false;
     }
 
+    /**
+    * @description Watches out for key moments of the game.
+    For collisions between player and enemy objects.
+    For when the game is won.
+    */
     update() {
+        /**
+        * @description Checks to see the position of each enemy object found
+        in the allEnemies array and compares it to the player position.
+        If paths cross, then resets player position
+        */
         for(let enemy of allEnemies) {
             if(this.y === enemy.y) {
                 if(this.x >= enemy.x - 0.5 && this.x <= enemy.x + .7) {
@@ -50,6 +77,10 @@ class Hero {
                 }
             }
         }
+        /**
+        * @description This will stop the game and present a modal
+        if the player reaches the target
+        */
         if(this.y === 0 && !this.win) {
               setTimeout(function() {
                   if(confirm('You Won!')) {
@@ -64,6 +95,10 @@ class Hero {
         ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83);
     }
 
+    /**
+    * @description Handles the apropriate moves that the player object can make.
+    * @param {string} key
+    */
     handleInput(key) {
         switch(key) {
             case 'left':
