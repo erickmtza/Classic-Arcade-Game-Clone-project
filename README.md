@@ -1,6 +1,22 @@
-frontend-nanodegree-arcade-game
+# Arcade Game
 ===============================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+# Instructions
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+Udacity **Arcade Game** requires the player to reach the water without touching any of the moving enemy obstacles. If contact with an enemy does occur, the player position will reset to its initial starting point. The game is won if player successfully reaches the goal.
+
+# Controls
+
+Please use the arrow keys.
+
+
+# Resources
+
+Links used to help make this game possible:
+
+* [Google](https://www.google.com/)
+* [Mozilla MDN](https://developer.mozilla.org/en-US/)
+* [W3Schools](https://www.w3schools.com/default.asp)
+* [JAVASCRIPT.INFO](https://javascript.info/)
+* [YouTube](https://www.youtube.com/)
+* FEND Webinar
